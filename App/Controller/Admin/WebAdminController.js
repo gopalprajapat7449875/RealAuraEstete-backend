@@ -54,7 +54,7 @@ let CreateAdminUser = async (req, res) => {
 }
 let UserdataAdmin = async (req, res) => {
 
-    let { _UserId } = req.body
+    // let { _UserId } = req.body
 
 
 
