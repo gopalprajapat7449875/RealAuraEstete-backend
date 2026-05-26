@@ -14,7 +14,9 @@ App.use(express.json())
 App.use('/admin', AdminRoute)
 // App.use('/website', WebsiteRoute)
 
-
+App.get("/" , (req , res)=>{
+    res.send("hello")
+})
 // App.use('/upload-files/cartimages', express.static('upload-files/cartimages'))
 
 mongoose.connect(process.env.DBCONACTION)
