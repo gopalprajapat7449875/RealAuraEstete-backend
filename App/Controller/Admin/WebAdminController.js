@@ -52,8 +52,26 @@ let CreateAdminUser = async (req, res) => {
     }
 
 }
+let UserdataAdmin = async (req, res) => {
 
-module.exports={CreateAdminUser}
+    let { _UserId } = req.body
+
+
+
+    let userData = await UserUseadd.find();
+
+    let obj = {
+        _status: true,
+        _message: "User Found",
+        userData,
+       
+    }
+    res.send(obj)
+
+
+}
+
+module.exports={CreateAdminUser,UserdataAdmin}
 
 // let AdminLogin = async (req, res) => {
 

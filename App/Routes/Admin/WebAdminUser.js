@@ -1,5 +1,5 @@
 let express = require('express')
-const { CreateAdminUser } = require('../../Controller/Admin/WebAdminController')
+const { CreateAdminUser, UserdataAdmin } = require('../../Controller/Admin/WebAdminController')
 
 let AdminUserRoutes = express.Router()
 // const multer = require("multer")
@@ -14,7 +14,7 @@ let AdminUserRoutes = express.Router()
 
 AdminUserRoutes.post('/create', CreateAdminUser)
 // AdminUserRoutes.post('/login', AdminLogin)
-
+AdminUserRoutes.get('/userdata', UserdataAdmin)
 
 // AdminUserRoutes.post('/change-password', CheckToken, ChangePassawordAdmin)
 
